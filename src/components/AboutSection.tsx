@@ -1,4 +1,4 @@
-import coachImage from "@/assets/coach-jas-headshot.jpg";
+import coachImage from "@/assets/jas-real-photo.jpg";
 
 const AboutSection = () => {
   return (
