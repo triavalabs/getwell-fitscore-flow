@@ -22,12 +22,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: npm
       - run: npm ci
       - run: npm run build
+      - run: rm -f dist/CNAME   # ensure no custom domain sneaks in
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
